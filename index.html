@@ -11,396 +11,237 @@
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 
-    <!-- Google fonts-->
+    <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
   </head>
 
-  <body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <span class="d-block d-lg-none">Gavin Peris</span>
-        <!-- Replace profile.jpg with your own image in assets/img/ -->
-        <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/GavinReal.jpg" alt="Gavin Peris" />
-        </span>
-      </a>
+  <body class="bento-dark">
+    <!-- Bento Topbar -->
+    <header class="bento-topbar" id="top">
+      <div class="bento-topbar-inner">
+        <a class="bento-brand" href="#top">
+          <img class="bento-avatar" src="assets/img/GavinReal.jpg" alt="Gavin Peris" />
+          <span style="font-weight:800;">Gavin Peris</span>
+        </a>
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarResponsive"
-        aria-controls="navbarResponsive"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#languages">Languages</a></li>
-          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
-        </ul>
+        <nav class="bento-nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#skills">Skills</a>
+          <a href="#languages">Languages</a>
+          <a href="#interests">Interests</a>
+        </nav>
       </div>
-    </nav>
+    </header>
 
-    <!-- Page Content-->
-    <div class="container-fluid p-0">
-      <!-- About-->
-      <section class="resume-section" id="about">
-        <div class="resume-section-content">
-          <h1 class="mb-0">
-            Gavin
-            <span class="text-primary">Peris</span>
-          </h1>
+    <main class="bento-shell">
+      <div class="bento-grid">
 
-          <div class="subheading mb-4">
-            Berlin, Germany ·
-            <a href="mailto:perisgavin@gmail.com">perisgavin@gmail.com</a> ·
-            <span>+49 157 7759 4758</span>
-          </div>
-
-          <!-- Updated About (recruiter + Germany aligned) -->
-          <p class="lead mb-3">
-  Cloud-native Full Stack .NET Engineer with <strong>4+ years of experience</strong> designing, building, and supporting
-  <strong>enterprise-grade, cloud-based applications</strong> using <strong>C#, ASP.NET Core, and Angular</strong>.
-</p>
-
-         <p class="mb-3">
-  I work across the full SDLC — from requirements analysis and system design to implementation, <strong>CI/CD</strong>,
-  production support, and <strong>incident resolution</strong>. I focus on building <strong>reliable, secure, and maintainable</strong>
-  systems that perform well in real-world production environments.
-</p>
-
-          
-
-          <p class="mb-2">
-  <strong>Core stack:</strong> C#, .NET 8/9, ASP.NET Core Web API, Angular (15+), Azure, Docker, Kubernetes, SQL Server
-</p>
-
-<div class="chips" aria-label="Highlights">
-  <span class="chip"><i class="fa-solid fa-shield-halved"></i> Security & RBAC</span>
-  <span class="chip"><i class="fa-solid fa-gauge-high"></i> Performance</span>
-  <span class="chip"><i class="fa-solid fa-screwdriver-wrench"></i> Production Support</span>
-  <span class="chip"><i class="fa-solid fa-cloud"></i> Azure & CI/CD</span>
-  <span class="chip"><i class="fa-solid fa-diagram-project"></i> Clean Architecture</span>
-</div>
-          <!-- Optional but recommended for Germany/EU clarity -->
-          <p class="mb-4">
-  <strong>Open to:</strong> Full-time opportunities in Germany / EU · Enterprise backend & fullstack roles (.NET / Azure / Angular)
-</p>
-
-          <div class="social-icons">
-            <a class="social-icon" href="https://www.linkedin.com/in/gavin-peris-25339316a/" target="_blank" rel="noreferrer">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a class="social-icon" href="https://github.com/Gavin400/" target="_blank" rel="noreferrer">
-              <i class="fab fa-github"></i>
-            </a>
-            <a class="social-icon" href="mailto:perisgavin@gmail.com">
-              <i class="fas fa-envelope"></i>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <hr class="m-0" />
-
-      <!-- Experience-->
-      <section class="resume-section" id="experience">
-        <div class="resume-section-content">
-          <h2 class="mb-5">Experience</h2>
-
-          <!-- Infosys -->
-          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="flex-grow-1">
-              <h3 class="mb-0">Software Engineer (.NET / Angular / Cloud-Native)</h3>
-              <div class="subheading mb-3">Infosys Ltd · Mangalore, India</div>
-
-              <ul>
-                <li>
-                  Designed, developed, and deployed a <strong>cloud-native enterprise document management system</strong> for a PwC client using
-                  <strong>ASP.NET Core Web APIs</strong> and <strong>Angular</strong> in production-critical environments.
-                </li>
-                <li>Implemented and optimized <strong>RESTful APIs</strong>, improving performance, security, and long-term maintainability.</li>
-                <li>
-                  Applied <strong>Clean Architecture</strong> and <strong>SOA</strong> to refactor backend services, reducing technical debt and improving
-                  extensibility.
-                </li>
-                <li>Built secure authentication and authorization using <strong>JWT</strong> and <strong>Role-Based Access Control (RBAC)</strong>.</li>
-                <li>
-                  Implemented asynchronous communication using <strong>SignalR</strong> and <strong>RabbitMQ</strong> to decouple services and improve resilience.
-                </li>
-                <li>
-                  Deployed and operated containerized services with <strong>Docker</strong> and <strong>Kubernetes</strong>, enabling safe CI/CD releases and supporting
-                  zero-downtime deployments.
-                </li>
-                <li>
-                  Improved observability through centralized logging/monitoring and provided <strong>L2/L3 production support</strong> (incident resolution, RCA,
-                  performance tuning).
-                </li>
-              </ul>
-            </div>
-            <div class="flex-shrink-0"><span class="text-primary">Jul 2021 – Mar 2024</span></div>
-          </div>
-
-          <!-- BrainWave -->
-          <div class="d-flex flex-column flex-md-row justify-content-between">
-            <div class="flex-grow-1">
-              <h3 class="mb-0">Graduate Software Engineer</h3>
-              <div class="subheading mb-3">BrainWave (BWC) Labs Pvt. Ltd · Pune, India</div>
-
-              <ul>
-                <li>Developed full-stack applications using <strong>Angular</strong> and <strong>ASP.NET Core</strong> with modular, maintainable design.</li>
-                <li>Introduced automated testing and Dockerized deployments, reducing production defects by ~<strong>30%</strong> and improving release quality.</li>
-                <li>Optimized SQL Server data access with <strong>Entity Framework Core</strong>, improving performance and API responsiveness.</li>
-                <li>Increased automated test coverage to ~<strong>80%</strong> and contributed to CI/CD automation via GitLab pipelines and Docker.</li>
-              </ul>
-            </div>
-            <div class="flex-shrink-0"><span class="text-primary">Jun 2019 – Jun 2021</span></div>
-          </div>
-        </div>
-      </section>
-
-      <hr class="m-0" />
-
-      <!-- Projects-->
-      <section class="resume-section" id="projects">
-        <div class="resume-section-content">
-         <h2 class="mb-5">Projects</h2>
-
-<!-- Project 1 -->
-<div class="project-card">
-  <div class="project-title-row">
-    <h3 class="mb-0">Real-Time Dating Web Application</h3>
-    <div class="project-links">
-      <a href="https://github.com/Gavin400/dating-app-2025" target="_blank" rel="noreferrer">
-        View on GitHub <i class="fas fa-arrow-up-right-from-square"></i>
-      </a>
-    </div>
-  </div>
-
-  <div class="project-subtitle">Production-ready full-stack app showcasing secure access control and real-time communication.</div>
-
-  <div class="project-meta">
-    <span class="chip"><i class="fa-brands fa-microsoft"></i> ASP.NET Core</span>
-    <span class="chip"><i class="fa-brands fa-angular"></i> Angular</span>
-    <span class="chip"><i class="fa-solid fa-bolt"></i> SignalR</span>
-    <span class="chip"><i class="fa-solid fa-cloud"></i> Azure</span>
-    <span class="chip"><i class="fa-brands fa-docker"></i> Docker</span>
-  </div>
-
-  <div class="project-label">Context</div>
-  <p class="mb-2">
-    Built to demonstrate modern architecture practices, secure identity, and real-time UX patterns commonly required in enterprise systems.
-  </p>
-
-  <div class="project-label">Responsibilities</div>
-  <ul class="mb-2">
-    <li>Designed backend using <strong>Clean Architecture</strong> with scalable <strong>REST APIs</strong>.</li>
-    <li>Implemented <strong>JWT</strong> authentication and <strong>RBAC</strong>.</li>
-    <li>Built Angular frontend with secure routing, validation, and real-time integration.</li>
-    <li>Implemented real-time <strong>online presence</strong> and <strong>private messaging</strong> via SignalR.</li>
-    <li>Deployed API + client to <strong>Azure</strong> using Docker.</li>
-  </ul>
-
-  <div class="project-label">Impact</div>
-  <ul class="mb-0">
-    <li>Demonstrates end-to-end delivery: design → implementation → deployment.</li>
-    <li>Shows operational readiness: authentication, real-time messaging, deployment.</li>
-  </ul>
-</div>
-
-<!-- Project 2 -->
-<div class="project-card">
-  <div class="project-title-row">
-    <h3 class="mb-0">Smart Certify App – Certification Management Platform</h3>
-    <div class="project-links">
-      <a href="https://github.com/Gavin400/SmartCertifyApp" target="_blank" rel="noreferrer">
-        View on GitHub <i class="fas fa-arrow-up-right-from-square"></i>
-      </a>
-    </div>
-  </div>
-
-  <div class="project-subtitle">Enterprise-style platform focusing on secure identity, automation, and cloud-native practices.</div>
-
-  <div class="project-meta">
-    <span class="chip"><i class="fa-brands fa-microsoft"></i> .NET 9</span>
-    <span class="chip"><i class="fa-brands fa-angular"></i> Angular 19</span>
-    <span class="chip"><i class="fa-solid fa-user-shield"></i> Azure AD B2C</span>
-    <span class="chip"><i class="fa-solid fa-key"></i> Key Vault</span>
-    <span class="chip"><i class="fa-solid fa-gears"></i> Azure DevOps</span>
-  </div>
-
-  <div class="project-label">Context</div>
-  <p class="mb-2">
-    Built to demonstrate secure enterprise authentication, automated workflows, and clean API architecture on Azure.
-  </p>
-
-  <div class="project-label">Responsibilities</div>
-  <ul class="mb-2">
-    <li>Architected APIs using <strong>Clean Architecture</strong> principles.</li>
-    <li>Integrated <strong>Azure AD B2C</strong> with JWT + <strong>RBAC</strong>.</li>
-    <li>Implemented <strong>CI/CD</strong> via Azure DevOps; secrets managed in <strong>Azure Key Vault</strong>.</li>
-    <li>Built background workflows using <strong>Azure Functions</strong> (SendGrid emails).</li>
-    <li>Implemented secure file uploads with <strong>Blob Storage</strong> + SAS tokens.</li>
-  </ul>
-
-  <div class="project-label">Impact</div>
-  <ul class="mb-0">
-    <li>Highlights enterprise identity patterns (B2C/RBAC) and operational maturity (CI/CD, Key Vault).</li>
-    <li>Shows production-oriented Azure usage: Functions, Blob Storage, secrets management.</li>
-  </ul>
-</div>
-            <p class="mb-0 mt-3">
-              <a href="https://github.com/Gavin400/SmartCertifyApp" target="_blank" rel="noreferrer">
-                View on GitHub <i class="fas fa-arrow-up-right-from-square"></i>
-              </a>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <hr class="m-0" />
-
-      <!-- Education-->
-      <section class="resume-section" id="education">
-        <div class="resume-section-content">
-          <h2 class="mb-5">Education</h2>
-
-          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <div class="flex-grow-1">
-              <h3 class="mb-0">University of Europe for Applied Sciences</h3>
-              <div class="subheading mb-3">Master’s Degree</div>
-              <div>Software and Applications Development and Analysis</div>
-              <div class="text-muted">Potsdam, Germany</div>
-            </div>
-            <div class="flex-shrink-0"><span class="text-primary">Mar 2024 – Aug 2025</span></div>
-          </div>
-
-          <div class="d-flex flex-column flex-md-row justify-content-between">
-            <div class="flex-grow-1">
-              <h3 class="mb-0">N.M.A.M Institute of Technology, Nitte</h3>
-              <div class="subheading mb-3">Bachelor’s of Engineering</div>
-              <div>Electronics and Automation</div>
-              <div class="text-muted">Karkala, India</div>
-            </div>
-            <div class="flex-shrink-0"><span class="text-primary">Jun 2015 – May 2019</span></div>
-          </div>
-        </div>
-      </section>
-
-      <hr class="m-0" />
-
-      <!-- Skills-->
-      <section class="resume-section" id="skills">
-        <div class="resume-section-content">
-          <h2 class="mb-5">Skills</h2>
-
-          <div class="subheading mb-3">Core Technologies</div>
-          <ul class="list-inline dev-icons mb-4">
-            <li class="list-inline-item" title="C#"><i class="fa-solid fa-code"></i></li>
-            <li class="list-inline-item" title=".NET / ASP.NET Core"><i class="fa-brands fa-microsoft"></i></li>
-            <li class="list-inline-item" title="Angular"><i class="fab fa-angular"></i></li>
-            <li class="list-inline-item" title="HTML5"><i class="fab fa-html5"></i></li>
-            <li class="list-inline-item" title="CSS3"><i class="fab fa-css3-alt"></i></li>
-            <li class="list-inline-item" title="TypeScript"><i class="fa-brands fa-js"></i></li>
-            <li class="list-inline-item" title="Azure"><i class="fa-solid fa-cloud"></i></li>
-            <li class="list-inline-item" title="Docker"><i class="fab fa-docker"></i></li>
-            <li class="list-inline-item" title="Kubernetes"><i class="fa-solid fa-cubes"></i></li>
-            <li class="list-inline-item" title="SQL / Data"><i class="fa-solid fa-database"></i></li>
-            <li class="list-inline-item" title="RabbitMQ / Messaging"><i class="fa-solid fa-diagram-project"></i></li>
-            <li class="list-inline-item" title="Git / GitHub"><i class="fab fa-github"></i></li>
-          </ul>
-
-          <div class="subheading mb-3">Programming Languages</div>
-          <ul class="fa-ul mb-4">
-            <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>C#</strong> (primary) · TypeScript · Python · Java (intermediate)</li>
-          </ul>
-
-          <div class="subheading mb-3">Backend & Architecture</div>
-          <ul class="fa-ul mb-4">
-            <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>.NET 8/9</strong>, ASP.NET Core Web API (RESTful services)</li>
-            <li><span class="fa-li"><i class="fas fa-check"></i></span>Authentication & Authorization: <strong>JWT</strong>, <strong>RBAC</strong>, Azure AD B2C</li>
-            <li><span class="fa-li"><i class="fas fa-check"></i></span>Clean Architecture, Service-Oriented Architecture (SOA), modular service design</li>
-            <li><span class="fa-li"><i class="fas fa-check"></i></span>Async & real-time systems: <strong>SignalR</strong>, <strong>RabbitMQ</strong></li>
-          </ul>
-
-          <div class="subheading mb-3">Front-End / UI</div>
-          <ul class="fa-ul mb-4">
-            <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Angular 15+</strong> (RxJS, Signals, Angular Services, state management)</li>
-            <li><span class="fa-li"><i class="fas fa-check"></i></span>HTML5, CSS3, Tailwind CSS</li>
-            <li><span class="fa-li"><i class="fas fa-check"></i></span>Blazor (familiar)</li>
-          </ul>
-
-          <div class="subheading mb-3">Cloud, DevOps & Tools</div>
-          <ul class="fa-ul mb-4">
-            <li><span class="fa-li"><i class="fas fa-check"></i></span>Azure: App Services, Blob Storage, Functions, Azure AD B2C, Key Vault</li>
-            <li><span class="fa-li"><i class="fas fa-check"></i></span>CI/CD: Azure DevOps, GitLab pipelines</li>
-            <li><span class="fa-li"><i class="fas fa-check"></i></span>Containers: Docker, Kubernetes</li>
-            <li><span class="fa-li"><i class="fas fa-check"></i></span>Git, Visual Studio, VS Code</li>
-          </ul>
-
-          <div class="subheading mb-3">Databases</div>
-          <ul class="fa-ul mb-4">
-            <li><span class="fa-li"><i class="fas fa-check"></i></span>SQL Server, MongoDB, MySQL</li>
-            <li><span class="fa-li"><i class="fas fa-check"></i></span>Entity Framework Core, relational data modeling</li>
-          </ul>
-
-          <div class="subheading mb-3">Testing & Quality</div>
-          <ul class="fa-ul mb-0">
-            <li><span class="fa-li"><i class="fas fa-check"></i></span>API & integration testing: Postman, Swagger</li>
-            <li><span class="fa-li"><i class="fas fa-check"></i></span>Code quality: ESLint, Prettier</li>
-            <li><span class="fa-li"><i class="fas fa-check"></i></span>Familiarity with Jasmine & Karma</li>
-          </ul>
-        </div>
-      </section>
-
-      <hr class="m-0" />
-
-      <!-- Languages-->
-      <section class="resume-section" id="languages">
-        <div class="resume-section-content">
-          <h2 class="mb-5">Languages</h2>
-          <ul class="fa-ul mb-0">
-            <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>English:</strong> Native</li>
-            <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>German:</strong> A2 (working proficiency; improving)</li>
-          </ul>
-        </div>
-      </section>
-
-      <hr class="m-0" />
-
-      <!-- Interests-->
-      <section class="resume-section" id="interests">
-        <div class="resume-section-content">
-          <h2 class="mb-5">Interests</h2>
-
-          <p class="mb-3">
-            Outside of work, I enjoy staying active and social—especially <strong>playing football</strong>, <strong>quizzing</strong>, and
-            <strong>chess</strong>. I also like exploring Berlin and meeting people through community events.
+        <!-- HERO -->
+        <section class="bento-card bento-hero span-7">
+          <div class="bento-kicker">Cloud-native · Full Stack · .NET</div>
+          <h1>Gavin <span style="color: var(--bento-accent);">Peris</span></h1>
+          <p class="subtitle">
+            Cloud-native Full Stack .NET Engineer focused on reliable, secure, production-ready systems.
           </p>
 
-          <p class="mb-0">
-            On the technical side, I enjoy learning modern backend and cloud-native topics—especially building scalable APIs, improving
-            deployment automation, and making systems more reliable in production.
-          </p>
-        </div>
-      </section>
-    </div>
+          <div class="bento-row">
+            <div class="bento-cta">
+              <a class="bento-btn primary" href="mailto:perisgavin@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+              <a class="bento-btn" href="https://www.linkedin.com/in/gavin-peris-25339316a/" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+              <a class="bento-btn" href="https://github.com/Gavin400/" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+            </div>
 
-    <!-- Bootstrap core JS-->
+            <div class="bento-meta" aria-label="Location and availability">
+              <span class="pill"><i class="fa-solid fa-location-dot"></i> Berlin, Germany</span>
+              <span class="pill"><i class="fa-solid fa-briefcase"></i> Open to Germany / EU</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- QUICK FACTS / STACK -->
+        <section class="bento-card span-5">
+          <div class="bento-kicker">Core stack</div>
+          <h2 style="margin-bottom:0.6rem;">What I build with</h2>
+          <p class="bento-muted" style="margin-top:0;">
+            Enterprise-grade web apps, REST APIs, and cloud-native services.
+          </p>
+
+          <div class="bento-tags">
+            <span>.NET 8/9</span>
+            <span>ASP.NET Core Web API</span>
+            <span>Angular 15+</span>
+            <span>Azure</span>
+            <span>Docker</span>
+            <span>Kubernetes</span>
+            <span>SQL Server</span>
+            <span>Clean Architecture</span>
+          </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="bento-card span-8" id="about">
+          <div class="bento-kicker">About</div>
+          <h2>Engineering style</h2>
+          <p>
+            Cloud-native Full Stack .NET Engineer with <strong>4+ years</strong> of experience designing, building, and supporting
+            <strong>enterprise-grade, cloud-based applications</strong> using <strong>C#, ASP.NET Core, and Angular</strong>.
+          </p>
+          <p class="bento-muted">
+            I work across the full SDLC — from requirements analysis and system design to implementation, CI/CD, production support,
+            and incident resolution. I value clean code, clear communication, and pragmatic decisions that balance technical quality with business needs.
+          </p>
+
+          <div class="bento-meta" style="margin-top:0.8rem;">
+            <span class="pill"><i class="fa-solid fa-shield-halved"></i> Security (JWT / RBAC)</span>
+            <span class="pill"><i class="fa-solid fa-gauge-high"></i> Performance</span>
+            <span class="pill"><i class="fa-solid fa-screwdriver-wrench"></i> Production Support</span>
+            <span class="pill"><i class="fa-solid fa-diagram-project"></i> Clean Architecture</span>
+          </div>
+        </section>
+
+        <!-- CONTACT CARD -->
+        <section class="bento-card span-4">
+          <div class="bento-kicker">Contact</div>
+          <h2>Let’s talk</h2>
+          <p class="bento-muted">
+            Fastest way to reach me is email. Happy to share CV and discuss roles in Germany/EU.
+          </p>
+          <div class="bento-cta" style="margin-top:0.75rem;">
+            <a class="bento-btn primary" href="mailto:perisgavin@gmail.com"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+            <a class="bento-btn" href="tel:+4915777594758"><i class="fa-solid fa-phone"></i> Call</a>
+          </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section class="bento-card span-6" id="experience">
+          <div class="bento-kicker">Experience</div>
+          <h2>Enterprise delivery</h2>
+
+          <h3 style="margin-bottom:0.2rem;">Infosys Ltd <span class="bento-muted" style="font-size:0.95rem;">· Mangalore, India</span></h3>
+          <div class="bento-muted" style="margin-bottom:0.5rem;">Software Engineer (.NET / Angular / Cloud-Native) · Jul 2021 – Mar 2024</div>
+          <ul class="bento-list">
+            <li>Delivered a cloud-native enterprise document management system for a PwC client using ASP.NET Core Web APIs and Angular.</li>
+            <li>Applied Clean Architecture / SOA, improved maintainability, and supported production (L2/L3) including RCA and performance tuning.</li>
+            <li>Built secure auth with JWT + RBAC; implemented async messaging (RabbitMQ) and real-time features (SignalR).</li>
+            <li>Containerized deployments using Docker + Kubernetes to support safe CI/CD and zero-downtime releases.</li>
+          </ul>
+        </section>
+
+        <section class="bento-card span-6">
+          <div class="bento-kicker">Earlier</div>
+          <h2>Quality & automation</h2>
+
+          <h3 style="margin-bottom:0.2rem;">BrainWave (BWC) Labs <span class="bento-muted" style="font-size:0.95rem;">· Pune, India</span></h3>
+          <div class="bento-muted" style="margin-bottom:0.5rem;">Graduate Software Engineer · Jun 2019 – Jun 2021</div>
+          <ul class="bento-list">
+            <li>Built full-stack features with Angular + ASP.NET Core using modular, maintainable design.</li>
+            <li>Introduced automated testing and Dockerized deployments, reducing production defects by ~30%.</li>
+            <li>Improved SQL Server performance with EF Core optimizations; increased automated test coverage to ~80%.</li>
+          </ul>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="bento-card span-6" id="projects">
+          <div class="bento-kicker">Selected work</div>
+          <div class="bento-project-title">
+            <h2 style="margin:0;">Real-Time Dating Web Application</h2>
+            <a href="https://github.com/Gavin400/dating-app-2025" target="_blank" rel="noreferrer">GitHub →</a>
+          </div>
+          <p class="bento-muted" style="margin-top:0.6rem;">
+            Full-stack app showcasing secure access control and real-time messaging.
+          </p>
+          <div class="bento-tags">
+            <span>ASP.NET Core</span><span>Angular</span><span>SignalR</span><span>Azure</span><span>Docker</span>
+          </div>
+          <ul class="bento-list">
+            <li>Clean Architecture, scalable REST APIs, JWT auth + RBAC.</li>
+            <li>Real-time online presence + private messaging using SignalR.</li>
+            <li>Deployed API + client to Azure using Docker (production-ready workflow).</li>
+          </ul>
+        </section>
+
+        <section class="bento-card span-6">
+          <div class="bento-kicker">Selected work</div>
+          <div class="bento-project-title">
+            <h2 style="margin:0;">Smart Certify App</h2>
+            <a href="https://github.com/Gavin400/SmartCertifyApp" target="_blank" rel="noreferrer">GitHub →</a>
+          </div>
+          <p class="bento-muted" style="margin-top:0.6rem;">
+            Certification management platform focused on secure identity and cloud automation.
+          </p>
+          <div class="bento-tags">
+            <span>.NET 9</span><span>Angular 19</span><span>Azure AD B2C</span><span>Azure DevOps</span><span>Key Vault</span>
+          </div>
+          <ul class="bento-list">
+            <li>Clean Architecture APIs with secure authentication (Azure AD B2C), JWT + RBAC.</li>
+            <li>CI/CD via Azure DevOps, secrets via Key Vault.</li>
+            <li>Azure Functions workflows (SendGrid) and secure uploads with Blob Storage + SAS.</li>
+          </ul>
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="bento-card span-6" id="education">
+          <div class="bento-kicker">Education</div>
+          <h2>Academic background</h2>
+          <p style="margin-bottom:0.35rem;"><strong>University of Europe for Applied Sciences</strong> · Potsdam, Germany</p>
+          <p class="bento-muted" style="margin-top:0;">Master’s — Software and Applications Development and Analysis · Mar 2024 – Aug 2025</p>
+
+          <hr style="margin: 1rem 0;" />
+
+          <p style="margin-bottom:0.35rem;"><strong>N.M.A.M Institute of Technology, Nitte</strong> · Karkala, India</p>
+          <p class="bento-muted" style="margin-top:0;">Bachelor’s — Electronics and Automation · Jun 2015 – May 2019</p>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="bento-card span-6" id="skills">
+          <div class="bento-kicker">Skills</div>
+          <h2>What you can expect</h2>
+          <ul class="bento-list">
+            <li><strong>Backend:</strong> .NET 8/9, ASP.NET Core Web API, Clean Architecture, SOA</li>
+            <li><strong>Security:</strong> JWT, RBAC, Azure AD B2C</li>
+            <li><strong>Cloud/DevOps:</strong> Azure (Functions, Blob Storage, Key Vault), CI/CD (Azure DevOps, GitLab), Docker, Kubernetes</li>
+            <li><strong>Frontend:</strong> Angular 15+ (RxJS, state), HTML/CSS, Tailwind</li>
+            <li><strong>Data:</strong> SQL Server, EF Core, MongoDB/MySQL (familiar)</li>
+          </ul>
+        </section>
+
+        <!-- LANGUAGES -->
+        <section class="bento-card span-4" id="languages">
+          <div class="bento-kicker">Languages</div>
+          <h2>Communication</h2>
+          <ul class="bento-list">
+            <li><strong>English:</strong> Native</li>
+            <li><strong>German:</strong> A2 (improving)</li>
+          </ul>
+        </section>
+
+        <!-- INTERESTS -->
+        <section class="bento-card span-8" id="interests">
+          <div class="bento-kicker">Interests</div>
+          <h2>Outside work</h2>
+          <p class="bento-muted" style="margin-bottom:0.6rem;">
+            Football, quizzing, and chess — plus exploring Berlin and meeting people through community events.
+          </p>
+          <p class="bento-muted" style="margin-bottom:0;">
+            On the technical side, I enjoy learning modern backend and cloud-native topics—building scalable APIs, improving deployment automation,
+            and making systems more reliable in production.
+          </p>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- Bootstrap core JS (kept for compatibility)-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>

@@ -10971,156 +10971,269 @@ section.resume-section .resume-section-content {
   }
 }
 
+
 /* =========================================================
-   Custom modern polish (append at end of styles.css)
+   Bento Grid Modern Override (Dark by default)
+   Append-only overrides for Start Bootstrap Resume theme
    ========================================================= */
 
-/* Softer background + better typography rhythm */
-body {
-  color: #4b5563;               /* slate-600-ish */
-  background: #fbfbfc;
+:root{
+  --bento-bg: #0b0f1a;
+  --bento-bg-2: #0f172a;
+  --bento-card: rgba(255,255,255,0.06);
+  --bento-border: rgba(255,255,255,0.12);
+  --bento-text: #e5e7eb;
+  --bento-muted: #9ca3af;
+  --bento-accent: #3b82f6;
+  --bento-shadow: 0 20px 60px rgba(0,0,0,0.45);
 }
 
-/* Make section headings feel premium */
-.resume-section-content h2 {
-  position: relative;
-  display: inline-block;
-  margin-bottom: 2.25rem !important;
-  letter-spacing: 0.04em;
+/* Force dark aesthetic (without breaking Bootstrap utilities) */
+body.bento-dark{
+  background: radial-gradient(1200px circle at 20% -10%, rgba(59,130,246,0.25), transparent 55%),
+              radial-gradient(900px circle at 90% 10%, rgba(168,85,247,0.18), transparent 55%),
+              linear-gradient(180deg, var(--bento-bg-2), var(--bento-bg));
+  color: var(--bento-text);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
 }
 
-.resume-section-content h2::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -0.6rem;
-  width: 64px;
-  height: 4px;
-  border-radius: 999px;
-  background: rgba(var(--bs-primary-rgb), 0.85);
+body.bento-dark a{
+  color: var(--bento-accent);
+}
+body.bento-dark a:hover{
+  color: rgba(59,130,246,0.9);
 }
 
-/* Make the left nav more modern */
-#sideNav.bg-primary {
-  background: linear-gradient(
-    180deg,
-    rgba(var(--bs-primary-rgb), 1) 0%,
-    rgba(10, 15, 25, 1) 100%
-  ) !important;
-}
-
-/* Cleaner profile ring */
-#sideNav .navbar-brand .img-profile {
-  border: 0.5rem solid rgba(255, 255, 255, 0.14);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-}
-
-/* Nav links: better hover */
-#sideNav .navbar-nav .nav-item .nav-link {
-  opacity: 0.9;
-  transition: transform 180ms ease, opacity 180ms ease;
-}
-#sideNav .navbar-nav .nav-item .nav-link:hover {
+body.bento-dark hr{
+  border-top-color: rgba(255,255,255,0.12);
   opacity: 1;
-  transform: translateX(2px);
 }
 
-/* Social icons: premium hover */
-.social-icons .social-icon {
-  background-color: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(6px);
-  transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
-}
-.social-icons .social-icon:hover {
-  background-color: rgba(var(--bs-primary-rgb), 1);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+/* Hide the old side nav layout when using bento */
+body.bento-dark #sideNav{ display:none !important; }
+body.bento-dark .container-fluid.p-0{ padding: 0 !important; }
+
+/* Bento layout */
+.bento-topbar{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(14px);
+  background: rgba(11,15,26,0.65);
+  border-bottom: 1px solid rgba(255,255,255,0.10);
 }
 
-/* Pill chips for stack + highlights */
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 1rem 0 1.5rem;
+.bento-topbar-inner{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.9rem 1.25rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 1rem;
 }
 
-.chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.45rem 0.7rem;
-  border-radius: 999px;
-  background: rgba(33, 37, 41, 0.06);
-  color: #374151;
-  font-size: 0.92rem;
-  line-height: 1;
-  border: 1px solid rgba(33, 37, 41, 0.08);
-}
-
-.chip i {
-  opacity: 0.85;
-}
-
-/* Project cards */
-.project-card {
-  padding: 1.4rem 1.4rem;
-  border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.88);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: 0 14px 35px rgba(16, 24, 40, 0.08);
-  transition: transform 180ms ease, box-shadow 180ms ease;
-  margin-bottom: 1.5rem;
-}
-
-.project-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 18px 55px rgba(16, 24, 40, 0.14);
-}
-
-.project-title-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
+.bento-brand{
+  display:flex;
+  align-items:center;
   gap: 0.75rem;
-  margin-bottom: 0.25rem;
+  text-decoration:none;
+  color: var(--bento-text);
 }
 
-.project-subtitle {
-  font-size: 0.95rem;
-  color: #6b7280;
-  margin-bottom: 0.9rem;
+.bento-avatar{
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
 
-.project-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 0.5rem 0 1rem;
+.bento-nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 0.6rem;
+  align-items:center;
+}
+.bento-nav a{
+  text-decoration:none;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.14);
+  color: rgba(229,231,235,0.9);
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+.bento-nav a:hover{
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.22);
+  transform: translateY(-1px);
 }
 
-.project-meta .chip {
-  background: rgba(var(--bs-primary-rgb), 0.08);
-  border-color: rgba(var(--bs-primary-rgb), 0.18);
+.bento-shell{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
 }
 
-/* Small section labels inside projects */
-.project-label {
-  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.95rem;
-  color: #6b7280;
-  margin-top: 1rem;
-  margin-bottom: 0.35rem;
+.bento-grid{
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
 }
 
-/* Better link style for "View on GitHub" */
-.project-links a {
-  text-decoration: none;
+.bento-card{
+  grid-column: span 12;
+  background: var(--bento-card);
+  border: 1px solid var(--bento-border);
+  border-radius: 20px;
+  padding: 1.25rem 1.25rem;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset;
+  backdrop-filter: blur(14px);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  overflow:hidden;
+  position:relative;
+}
+.bento-card:hover{
+  transform: translateY(-3px);
+  border-color: rgba(255,255,255,0.18);
+  box-shadow: var(--bento-shadow);
+}
+
+.bento-card h1, .bento-card h2, .bento-card h3{
+  color: var(--bento-text) !important;
+  letter-spacing: -0.02em;
+}
+
+.bento-kicker{
+  color: var(--bento-muted);
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  margin-bottom: 0.75rem;
 }
-.project-links a:hover {
-  text-decoration: underline;
+
+.bento-hero{
+  padding: 1.6rem 1.6rem;
+}
+.bento-hero h1{
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  margin: 0 0 0.3rem;
+}
+.bento-hero .subtitle{
+  color: var(--bento-muted);
+  font-size: 1.08rem;
+  margin: 0.25rem 0 1.1rem;
+  line-height: 1.6;
+}
+
+.bento-row{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  gap: 1rem;
+}
+
+.bento-cta{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 0.65rem;
+}
+
+.bento-btn{
+  display:inline-flex;
+  align-items:center;
+  gap: 0.55rem;
+  padding: 0.55rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.16);
+  text-decoration:none;
+  color: var(--bento-text);
+  font-weight: 700;
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+.bento-btn:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.24);
+  text-decoration:none;
+}
+.bento-btn.primary{
+  background: linear-gradient(135deg, rgba(59,130,246,1), rgba(168,85,247,0.95));
+  border-color: transparent;
+}
+.bento-btn.primary:hover{
+  background: linear-gradient(135deg, rgba(59,130,246,0.92), rgba(168,85,247,0.88));
+}
+
+.bento-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 0.5rem;
+  margin-top: 0.2rem;
+  color: rgba(229,231,235,0.92);
+}
+.bento-meta .pill{
+  padding: 0.38rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.10);
+  color: rgba(229,231,235,0.92);
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.bento-muted{ color: var(--bento-muted); }
+
+.bento-list{
+  margin: 0.6rem 0 0;
+  padding-left: 1.15rem;
+}
+.bento-list li{ margin: 0.35rem 0; }
+
+.bento-project-title{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap: 1rem;
+  flex-wrap:wrap;
+}
+.bento-project-title a{
+  text-decoration:none;
+  font-weight: 800;
+}
+.bento-project-title a:hover{ text-decoration: underline; }
+
+.bento-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 0.5rem;
+  margin: 0.8rem 0 0.2rem;
+}
+.bento-tags span{
+  padding: 0.34rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(59,130,246,0.10);
+  border: 1px solid rgba(59,130,246,0.22);
+  color: rgba(229,231,235,0.95);
+  font-weight: 700;
+  font-size: 0.84rem;
+}
+
+/* Responsive spans */
+@media (min-width: 768px){
+  .span-6{ grid-column: span 6; }
+  .span-7{ grid-column: span 7; }
+  .span-5{ grid-column: span 5; }
+  .span-4{ grid-column: span 4; }
+  .span-8{ grid-column: span 8; }
+  .span-12{ grid-column: span 12; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .bento-card, .bento-btn, .bento-nav a { transition: none !important; }
 }
