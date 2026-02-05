@@ -11040,31 +11040,14 @@ body.bento-dark .container-fluid.p-0{ padding: 0 !important; }
   text-decoration:none;
   color: var(--bento-text);
 }
-.bento-avatar {
-  width: 68px;
-  height: 68px;
-  border-radius: 50%;
+
+.bento-avatar{
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
   object-fit: cover;
-  object-position: center top;
-
-  /* passport-style polish */
-  border: 2px solid rgba(255, 255, 255, 0.28);
-  background-color: #0b0f1a;
-
-  box-shadow:
-    0 0 0 5px rgba(59, 130, 246, 0.14),
-    0 14px 38px rgba(0, 0, 0, 0.55);
-
-  transition: transform 180ms ease, box-shadow 180ms ease;
-}
-
-
-.bento-avatar:hover {
-  transform: scale(1.02);
-}
-
-.bento-brand {
-  gap: 0.9rem; /* was smaller */
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
 
 .bento-nav{
@@ -11316,4 +11299,46 @@ body.bento-dark .container-fluid.p-0{ padding: 0 !important; }
   color: rgba(229,231,235,0.92);
   font-weight: 800;
   margin-bottom: 0.5rem;
+}
+
+
+
+/* =========================================================
+   Bento Patch v3: Portrait card + nav cleanup + mail buttons
+   ========================================================= */
+
+/* Add span-3 for desktop grid */
+@media (min-width: 768px){
+  .span-3{ grid-column: span 3; }
+}
+
+/* Portrait card */
+.bento-portrait .portrait-wrap{
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.04);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+.passport-photo{
+  width: 100%;
+  aspect-ratio: 4 / 5;          /* passport-ish */
+  object-fit: cover;
+  object-position: center 20%;   /* keep face nicely framed */
+  display: block;
+  filter: saturate(1.02) contrast(1.03);
+}
+
+/* Topbar brand spacing now that avatar is removed */
+.bento-brand{
+  gap: 0.6rem;
+}
+
+/* Ensure buttons always feel clickable */
+.bento-btn{ cursor: pointer; }
+.bento-btn:focus{
+  outline: 2px solid rgba(59,130,246,0.55);
+  outline-offset: 2px;
 }
