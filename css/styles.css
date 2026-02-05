@@ -11040,27 +11040,31 @@ body.bento-dark .container-fluid.p-0{ padding: 0 !important; }
   text-decoration:none;
   color: var(--bento-text);
 }
-
-.bento-avatar{
-  width: 52px;
-  height: 52px;
-  border-radius: 999px;
+.bento-avatar {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
   object-fit: cover;
+  object-position: center top;
 
-  /* visual polish */
-  border: 2px solid rgba(255,255,255,0.25);
+  /* passport-style polish */
+  border: 2px solid rgba(255, 255, 255, 0.28);
+  background-color: #0b0f1a;
+
   box-shadow:
-    0 0 0 4px rgba(59,130,246,0.15),
-    0 12px 30px rgba(0,0,0,0.45);
+    0 0 0 5px rgba(59, 130, 246, 0.14),
+    0 14px 38px rgba(0, 0, 0, 0.55);
 
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
-.bento-avatar:hover{
-  transform: scale(1.03);
-  box-shadow:
-    0 0 0 5px rgba(59,130,246,0.25),
-    0 16px 40px rgba(0,0,0,0.55);
+
+.bento-avatar:hover {
+  transform: scale(1.02);
+}
+
+.bento-brand {
+  gap: 0.9rem; /* was smaller */
 }
 
 .bento-nav{
