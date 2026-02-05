@@ -10970,3 +10970,145 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+
+
+/* ===========================
+   Modern overrides (2026 look)
+   Paste at END of styles.css
+   =========================== */
+
+/* 1) Modern color system */
+:root{
+  --bs-primary: #2563eb;              /* modern blue */
+  --bs-primary-rgb: 37, 99, 235;
+  --bs-link-color: #2563eb;
+  --bs-link-hover-color: #1d4ed8;
+
+  --gp-bg: #0b1220;                   /* deep navy */
+  --gp-surface: rgba(255,255,255,0.06);
+  --gp-border: rgba(255,255,255,0.10);
+  --gp-text: #0f172a;
+  --gp-muted: #475569;
+}
+
+/* 2) Smoother typography */
+body{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.1px;
+  text-rendering: optimizeLegibility;
+}
+
+h1,h2,h3,h4,h5,h6{
+  letter-spacing: 0.5px;
+}
+
+/* 3) Make sections breathe more */
+.resume-section{
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+@media (min-width: 992px){
+  .resume-section{
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+  }
+}
+
+/* 4) Modern sidebar: gradient + subtle border */
+#sideNav{
+  background: radial-gradient(1200px 800px at 10% 10%, rgba(37,99,235,0.35), transparent 60%),
+              radial-gradient(900px 600px at 20% 80%, rgba(20,184,166,0.25), transparent 55%),
+              var(--gp-bg) !important;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Keep nav items crisp */
+#sideNav .navbar-nav .nav-item .nav-link{
+  color: rgba(255,255,255,0.75);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: transform 120ms ease, color 120ms ease;
+}
+
+#sideNav .navbar-nav .nav-item .nav-link:hover{
+  color: rgba(255,255,255,0.95);
+  transform: translateX(2px);
+}
+
+/* Highlight active section (Bootstrap adds .active) */
+#sideNav .navbar-nav .nav-item .nav-link.active{
+  color: #ffffff;
+}
+
+/* 5) Profile image: modern ring + nicer shadow */
+.img-profile{
+  border: 3px solid rgba(255,255,255,0.18) !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+/* 6) Links: nicer underline */
+a{
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+/* 7) Social icons: glassy chips + hover lift */
+.social-icons .social-icon{
+  background: rgba(15, 23, 42, 0.35);
+  border: 1px solid rgba(15, 23, 42, 0.15);
+  backdrop-filter: blur(10px);
+  transition: transform 140ms ease, box-shadow 140ms ease, background 140ms ease;
+}
+
+.social-icons .social-icon:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(2,6,23,0.25);
+  background: rgba(37,99,235,0.22);
+}
+
+/* 8) Skill icons row: bigger + hover */
+.dev-icons .list-inline-item{
+  margin-right: 0.75rem;
+  opacity: 0.9;
+  transition: transform 140ms ease, opacity 140ms ease;
+}
+.dev-icons .list-inline-item:hover{
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+/* 9) Bullets: cleaner list rhythm */
+.resume-section-content ul{
+  margin-top: 0.75rem;
+}
+.resume-section-content ul li{
+  margin-bottom: 0.35rem;
+  line-height: 1.55;
+}
+
+/* 10) Modern horizontal rule */
+hr.m-0{
+  border-top: 1px solid rgba(15,23,42,0.10) !important;
+  opacity: 1 !important;
+}
+
+/* 11) Headings and subheading color tuning */
+.resume-section-content .subheading{
+  color: var(--gp-muted);
+  letter-spacing: 0.06em;
+}
+.resume-section-content p.lead{
+  color: #0f172a;
+  max-width: 68ch;
+}
+
+/* 12) Optional: make project blocks look like cards (no HTML change needed) */
+#projects .resume-section-content > div{
+  padding: 1.25rem 1.25rem;
+  border-radius: 18px;
+  border: 1px solid rgba(15,23,42,0.08);
+  box-shadow: 0 10px 30px rgba(2,6,23,0.06);
+  margin-bottom: 1.25rem;
+}
