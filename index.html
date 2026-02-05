@@ -58,10 +58,10 @@
             <div class="bento-cta">
               <a class="bento-btn primary" href="mailto:perisgavin@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
               <a class="bento-btn" href="https://www.linkedin.com/in/gavin-peris-25339316a/" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
-              <a class="bento-btn" href="https://github.com/Gavin400/" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a class="bento-btn icon-only" href="https://github.com/Gavin400/" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
             </div>
 
-            <div class="bento-meta" aria-label="Location and availability">
+            <div class="bento-meta aria-label="Location and availability">
               <span class="pill"><i class="fa-solid fa-location-dot"></i> Berlin, Germany</span>
               <span class="pill"><i class="fa-solid fa-briefcase"></i> Open to Germany / EU</span>
             </div>
@@ -69,7 +69,7 @@
         </section>
 
         <!-- QUICK FACTS / STACK -->
-        <section class="bento-card span-5">
+        <section class="bento-card stack-card span-5">
           <div class="bento-kicker">Core stack</div>
           <h2 style="margin-bottom:0.6rem;">What I build with</h2>
           <p class="bento-muted" style="margin-top:0;">
@@ -89,7 +89,7 @@
         </section>
 
         <!-- ABOUT -->
-        <section class="bento-card span-8" id="about">
+        <section class="bento-card row-2 span-8" id="about">
           <div class="bento-kicker">About</div>
           <h2>Engineering style</h2>
           <p>
@@ -110,7 +110,7 @@
         </section>
 
         <!-- CONTACT CARD -->
-        <section class="bento-card span-4">
+        <section class="bento-card row-2 span-4">
           <div class="bento-kicker">Contact</div>
           <h2>Let’s talk</h2>
           <p class="bento-muted">
@@ -131,7 +131,7 @@
           <div class="bento-muted" style="margin-bottom:0.5rem;">Software Engineer (.NET / Angular / Cloud-Native) · Jul 2021 – Mar 2024</div>
           <ul class="bento-list">
             <li>Delivered a cloud-native enterprise document management system for a PwC client using ASP.NET Core Web APIs and Angular.</li>
-            <li>Applied Clean Architecture / SOA, improved maintainability, and supported production (L2/L3) including RCA and performance tuning.</li>
+            <li>Applied Clean Architecture / SOA to improve long-term maintainability and supported production systems (L2/L3), including RCA and performance tuning.</li>
             <li>Built secure auth with JWT + RBAC; implemented async messaging (RabbitMQ) and real-time features (SignalR).</li>
             <li>Containerized deployments using Docker + Kubernetes to support safe CI/CD and zero-downtime releases.</li>
           </ul>
@@ -163,11 +163,12 @@
           <div class="bento-tags">
             <span>ASP.NET Core</span><span>Angular</span><span>SignalR</span><span>Azure</span><span>Docker</span>
           </div>
-          <ul class="bento-list">
-            <li>Clean Architecture, scalable REST APIs, JWT auth + RBAC.</li>
-            <li>Real-time online presence + private messaging using SignalR.</li>
-            <li>Deployed API + client to Azure using Docker (production-ready workflow).</li>
-          </ul>
+          <div class="bento-section-split">
+            <div class="bento-subhead">What I built</div>
+            <ul class="bento-list"><li>Designed a full-stack app with ASP.NET Core Web API + Angular using Clean Architecture and modular boundaries.</li><li>Implemented secure authentication with JWT and role-based access control (RBAC).</li><li>Built real-time presence and private messaging with SignalR, including secure routing and UI validation.</li><li>Deployed the full stack (API + client) to Microsoft Azure using Docker.</li></ul>
+            <div class="bento-subhead" style="margin-top:0.9rem;">Impact</div>
+            <ul class="bento-list"><li>Demonstrates production readiness: secure access, real-time communication, and cloud deployment workflow.</li><li>Improves user interaction with instant messaging and online presence (real-time UX).</li><li>Shows strong separation of concerns and maintainability for long-term evolution.</li></ul>
+          </div>
         </section>
 
         <section class="bento-card span-6">
@@ -182,11 +183,12 @@
           <div class="bento-tags">
             <span>.NET 9</span><span>Angular 19</span><span>Azure AD B2C</span><span>Azure DevOps</span><span>Key Vault</span>
           </div>
-          <ul class="bento-list">
-            <li>Clean Architecture APIs with secure authentication (Azure AD B2C), JWT + RBAC.</li>
-            <li>CI/CD via Azure DevOps, secrets via Key Vault.</li>
-            <li>Azure Functions workflows (SendGrid) and secure uploads with Blob Storage + SAS.</li>
-          </ul>
+          <div class="bento-section-split">
+            <div class="bento-subhead">What I built</div>
+            <ul class="bento-list"><li>Architected enterprise-ready ASP.NET Core APIs using Clean Architecture principles.</li><li>Integrated Azure AD B2C for authentication with JWT tokens and RBAC for granular access control.</li><li>Implemented CI/CD pipelines using Azure DevOps, with secret management via Azure Key Vault.</li><li>Built background workflows with Azure Functions (email alerts via SendGrid) and secure file uploads to Azure Blob Storage using SAS tokens.</li></ul>
+            <div class="bento-subhead" style="margin-top:0.9rem;">Impact</div>
+            <ul class="bento-list"><li>Enterprise-grade security posture (managed identity, token-based auth, RBAC, secrets management).</li><li>Reliable, repeatable deployments through CI/CD and infrastructure-aware workflows.</li><li>Supports scalable automation (functions + secure storage) typical of real production systems.</li></ul>
+          </div>
         </section>
 
         <!-- EDUCATION -->
@@ -205,14 +207,57 @@
         <!-- SKILLS -->
         <section class="bento-card span-6" id="skills">
           <div class="bento-kicker">Skills</div>
-          <h2>What you can expect</h2>
-          <ul class="bento-list">
-            <li><strong>Backend:</strong> .NET 8/9, ASP.NET Core Web API, Clean Architecture, SOA</li>
-            <li><strong>Security:</strong> JWT, RBAC, Azure AD B2C</li>
-            <li><strong>Cloud/DevOps:</strong> Azure (Functions, Blob Storage, Key Vault), CI/CD (Azure DevOps, GitLab), Docker, Kubernetes</li>
-            <li><strong>Frontend:</strong> Angular 15+ (RxJS, state), HTML/CSS, Tailwind</li>
-            <li><strong>Data:</strong> SQL Server, EF Core, MongoDB/MySQL (familiar)</li>
-          </ul>
+          <h2>Well-rounded for production</h2>
+          <p class="bento-muted" style="margin-top:0.4rem;">
+            I’m comfortable shipping end-to-end features: clean APIs, secure auth, reliable deployments, and maintainable Angular UIs.
+          </p>
+
+          <div class="bento-skill-grid" style="margin-top:1rem;">
+            <div class="skill-group">
+              <div class="skill-title">Programming</div>
+              <div class="bento-tags">
+                <span>C#</span><span>TypeScript</span><span>Python</span><span>Java (intermediate)</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <div class="skill-title">Front-end / UI</div>
+              <div class="bento-tags">
+                <span>Angular 15+</span><span>RxJS</span><span>Signals</span><span>State management</span><span>Angular Services</span>
+                <span>Tailwind CSS</span><span>HTML5</span><span>CSS3</span><span>Blazor (familiar)</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <div class="skill-title">Back-end / Architecture</div>
+              <div class="bento-tags">
+                <span>.NET 8/9</span><span>ASP.NET Core Web API</span><span>REST</span><span>Clean Architecture</span><span>SOA</span>
+                <span>JWT</span><span>RBAC</span><span>SignalR</span><span>RabbitMQ</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <div class="skill-title">Cloud / DevOps / Tools</div>
+              <div class="bento-tags">
+                <span>Azure App Service</span><span>Azure Functions</span><span>Blob Storage</span><span>Azure AD B2C</span><span>Key Vault</span>
+                <span>CI/CD (Azure DevOps)</span><span>CI/CD (GitLab)</span><span>Docker</span><span>Kubernetes</span><span>Git</span><span>Visual Studio</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <div class="skill-title">Testing / Quality</div>
+              <div class="bento-tags">
+                <span>Postman</span><span>Swagger</span><span>ESLint</span><span>Prettier</span><span>Jasmine/Karma (familiar)</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <div class="skill-title">Databases</div>
+              <div class="bento-tags">
+                <span>SQL Server</span><span>Entity Framework Core</span><span>Relational modeling</span><span>MongoDB</span><span>MySQL</span>
+              </div>
+            </div>
+          </div>
         </section>
 
         <!-- LANGUAGES -->

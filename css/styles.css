@@ -11042,12 +11042,25 @@ body.bento-dark .container-fluid.p-0{ padding: 0 !important; }
 }
 
 .bento-avatar{
-  width: 40px;
-  height: 40px;
+  width: 52px;
+  height: 52px;
   border-radius: 999px;
   object-fit: cover;
-  border: 1px solid rgba(255,255,255,0.18);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+
+  /* visual polish */
+  border: 2px solid rgba(255,255,255,0.25);
+  box-shadow:
+    0 0 0 4px rgba(59,130,246,0.15),
+    0 12px 30px rgba(0,0,0,0.45);
+
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.bento-avatar:hover{
+  transform: scale(1.03);
+  box-shadow:
+    0 0 0 5px rgba(59,130,246,0.25),
+    0 16px 40px rgba(0,0,0,0.55);
 }
 
 .bento-nav{
@@ -11236,4 +11249,67 @@ body.bento-dark .container-fluid.p-0{ padding: 0 !important; }
 
 @media (prefers-reduced-motion: reduce){
   .bento-card, .bento-btn, .bento-nav a { transition: none !important; }
+}
+
+
+
+/* =========================================================
+   Bento Spacing + Clarity Patch (v2)
+   ========================================================= */
+
+.bento-grid{ gap: 1.6rem; } /* more breathing room */
+
+.bento-hero{ padding: 2.2rem 2.4rem; }
+.bento-hero .subtitle{
+  max-width: 520px;
+  line-height: 1.7;
+  margin-bottom: 1.4rem;
+}
+
+.bento-row{ align-items: flex-start; gap: 1.15rem; }
+.bento-cta{ gap: 0.75rem; }
+
+.bento-btn.icon-only{
+  padding: 0.55rem;
+  width: 42px;
+  height: 42px;
+  justify-content: center;
+}
+
+.bento-card.stack-card{ background: rgba(255,255,255,0.04); }
+
+.bento-tags span{
+  font-size: 0.82rem;
+  padding: 0.32rem 0.6rem;
+}
+
+.bento-card p{ max-width: 62ch; }
+
+.bento-card.row-2{ margin-top: 0.6rem; }
+
+.bento-card{
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.05),
+    0 12px 35px rgba(0,0,0,0.35);
+}
+
+/* Projects: split headings */
+.bento-subhead{
+  color: rgba(229,231,235,0.85);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  margin-top: 0.2rem;
+}
+
+/* Skills: group layout */
+.bento-skill-grid{
+  display: grid;
+  gap: 1.1rem;
+}
+.skill-title{
+  color: rgba(229,231,235,0.92);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
 }
