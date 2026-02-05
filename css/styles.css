@@ -11342,3 +11342,12 @@ body.bento-dark .container-fluid.p-0{ padding: 0 !important; }
   outline: 2px solid rgba(59,130,246,0.55);
   outline-offset: 2px;
 }
+
+
+
+/* =========================================================
+   Bento Patch v4: Link click reliability + WhatsApp icon
+   ========================================================= */
+
+.bento-card, .bento-btn, .bento-nav a { pointer-events: auto; }
+.bento-cta { pointer-events: auto; }
