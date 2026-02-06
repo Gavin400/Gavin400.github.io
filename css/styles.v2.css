@@ -11354,45 +11354,161 @@ body.bento-dark .container-fluid.p-0{ padding: 0 !important; }
 
 
 /* =========================================================
-   Mobile Bento Fix (strong override)
+   Mobile Bento Fix: keep mosaic layout on phones
+   (add this at the END of styles.css)
    ========================================================= */
 @media (max-width: 767.98px) {
-
-  /* Ensure the grid actually becomes 2 columns */
-  .bento-grid{
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 1rem !important;
-    grid-auto-flow: dense;
+  /* 2-column bento on mobile */
+  .bento-shell {
+    padding: 1.25rem 1rem 2.25rem;
   }
 
-  /* Default all cards to full-width in the 2-col grid */
-  .bento-grid > .bento-card{
-    grid-column: 1 / -1 !important;
+  .bento-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    grid-auto-flow: dense; /* helps pack tiles nicely */
   }
 
-  /* Half-width tiles (use your existing span classes) */
-  .bento-grid > .bento-card.span-3,
-  .bento-grid > .bento-card.span-4{
+  /* Mobile span mapping using your existing span-* classes:
+     - small cards (span-3 / span-4) become half-width
+     - everything else becomes full-width
+  */
+  .span-3,
+  .span-4 {
     grid-column: span 1 !important;
   }
 
-  /* Everything else stays full width */
-  .bento-grid > .bento-card.span-5,
-  .bento-grid > .bento-card.span-6,
-  .bento-grid > .bento-card.span-7,
-  .bento-grid > .bento-card.span-8,
-  .bento-grid > .bento-card.span-12{
-    grid-column: 1 / -1 !important;
+  .span-5,
+  .span-6,
+  .span-7,
+  .span-8,
+  .span-12 {
+    grid-column: span 2 !important;
   }
 
-  /* Optional: make tiles a bit tighter on phones */
+  /* Make cards feel better on small screens */
+  .bento-card {
+    padding: 1rem;
+    border-radius: 18px;
+  }
+
+  /* Nav: turn into horizontal scroll so it doesn't wrap/cut off */
+  .bento-nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+  }
+  .bento-nav::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+}
+
+/* Very small phones: fall back to single column for readability */
+@media (max-width: 420px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .span-3,
+  .span-4,
+  .span-5,
+  .span-6,
+  .span-7,
+  .span-8,
+  .span-12 {
+    grid-column: span 1 !important;
+  }
+}
+
+/* =========================================================
+   Mobile "Dense Bento" layout: looks like desktop bento wall
+   ========================================================= */
+
+/* Phones: use 6-column grid (desktop-like), but tighter spacing */
+@media (max-width: 767.98px) {
+
+  /* Make the grid feel like the web bento layout */
+  .bento-grid{
+    display: grid !important;
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    gap: 0.75rem !important;
+    grid-auto-flow: dense;
+  }
+
+  /* Compact card density (reduces "1 card = 1 page") */
   .bento-card{
-    padding: 1rem !important;
-    border-radius: 18px !important;
+    padding: 0.85rem !important;
+    border-radius: 16px !important;
   }
 
-  /* Nav: horizontal scroll instead of wrapping */
+  /* Typography density */
+  .bento-hero h1{
+    font-size: clamp(1.6rem, 6vw, 2.3rem) !important;
+    margin-bottom: 0.4rem !important;
+  }
+  .bento-card h2{
+    font-size: 1.2rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .bento-card p{
+    margin-bottom: 0.6rem !important;
+    line-height: 1.45 !important;
+  }
+  .bento-muted{
+    font-size: 0.95rem !important;
+  }
+
+  /* Lists are tall on mobile — tighten them */
+  .bento-list{
+    margin: 0.35rem 0 0 !important;
+    padding-left: 1.1rem !important;
+  }
+  .bento-list li{
+    margin: 0.25rem 0 !important;
+  }
+
+  /* Tags/pills take a lot of vertical space */
+  .bento-tags{
+    gap: 0.35rem !important;
+    margin-top: 0.55rem !important;
+  }
+  .bento-tags span,
+  .pill{
+    padding: 0.35rem 0.6rem !important;
+    font-size: 0.85rem !important;
+  }
+
+  /* Portrait is a big reason mobile feels like "one card per page" */
+  .passport-photo{
+    max-height: 220px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+
+  /* Mobile remap of existing spans (desktop 12-col -> mobile 6-col)
+     span-3  => 2 cols
+     span-4  => 3 cols
+     span-6  => 6 cols
+     span-8  => 6 cols
+     span-12 => 6 cols
+  */
+  .bento-grid > .bento-card.span-3 { grid-column: span 2 !important; }
+  .bento-grid > .bento-card.span-4 { grid-column: span 3 !important; }
+  .bento-grid > .bento-card.span-5 { grid-column: span 6 !important; }
+  .bento-grid > .bento-card.span-6 { grid-column: span 6 !important; }
+  .bento-grid > .bento-card.span-7 { grid-column: span 6 !important; }
+  .bento-grid > .bento-card.span-8 { grid-column: span 6 !important; }
+  .bento-grid > .bento-card.span-12{ grid-column: span 6 !important; }
+
+  /* Keep the top bar from eating too much vertical space */
+  .bento-topbar-inner{
+    padding: 0.6rem 0.9rem !important;
+    gap: 0.6rem !important;
+  }
+
+  /* Nav becomes scrollable so it doesn't wrap into a tall block */
   .bento-nav{
     flex-wrap: nowrap !important;
     overflow-x: auto !important;
@@ -11401,9 +11517,10 @@ body.bento-dark .container-fluid.p-0{ padding: 0 !important; }
     scrollbar-width: none;
   }
   .bento-nav::-webkit-scrollbar{ display:none; }
+  .bento-nav a{ font-size: 0.9rem !important; }
 }
 
-/* Super small phones: single column */
+/* Super small phones: single column for readability */
 @media (max-width: 420px){
   .bento-grid{
     grid-template-columns: 1fr !important;
@@ -11412,5 +11529,3 @@ body.bento-dark .container-fluid.p-0{ padding: 0 !important; }
     grid-column: 1 / -1 !important;
   }
 }
-
-
