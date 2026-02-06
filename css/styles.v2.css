@@ -11529,3 +11529,88 @@ body.bento-dark .container-fluid.p-0{ padding: 0 !important; }
     grid-column: 1 / -1 !important;
   }
 }
+
+/* =========================================================
+   MOBILE BENTO (stable + dense, not chaotic)
+   Paste at END of styles.css
+   ========================================================= */
+
+/* 1) Base phone layout: 2 columns */
+@media (max-width: 599.98px) {
+  .bento-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.8rem !important;
+    grid-auto-flow: dense;
+  }
+
+  /* Default: full width card (2 cols) */
+  .bento-grid > .bento-card {
+    grid-column: span 2 !important;
+  }
+
+  /* Small tiles become half width */
+  .bento-grid > .bento-card.span-3,
+  .bento-grid > .bento-card.span-4 {
+    grid-column: span 1 !important;
+  }
+
+  /* Big sections stay full width */
+  .bento-grid > .bento-card.span-5,
+  .bento-grid > .bento-card.span-6,
+  .bento-grid > .bento-card.span-7,
+  .bento-grid > .bento-card.span-8,
+  .bento-grid > .bento-card.span-12 {
+    grid-column: span 2 !important;
+  }
+
+  /* Density tweaks so 1 card doesn’t fill the screen */
+  .bento-card { padding: 0.95rem !important; border-radius: 16px !important; }
+  .bento-card p { line-height: 1.45 !important; margin-bottom: 0.55rem !important; }
+  .bento-list li { margin: 0.25rem 0 !important; }
+
+  /* Portrait is usually the #1 "too tall" culprit */
+  .passport-photo { max-height: 220px !important; width: 100% !important; object-fit: cover !important; }
+
+  /* Nav: make it scroll instead of wrapping into 2 rows */
+  .bento-nav {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .bento-nav::-webkit-scrollbar { display: none; }
+}
+
+/* 2) Larger phones: 3 columns for more density */
+@media (min-width: 600px) and (max-width: 899.98px) {
+  .bento-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 0.9rem !important;
+    grid-auto-flow: dense;
+  }
+
+  /* Default: cards take full width unless small */
+  .bento-grid > .bento-card { grid-column: span 3 !important; }
+
+  /* Small tiles: 1 column */
+  .bento-grid > .bento-card.span-3 { grid-column: span 1 !important; }
+
+  /* Medium tiles: 2 columns */
+  .bento-grid > .bento-card.span-4,
+  .bento-grid > .bento-card.span-5 { grid-column: span 2 !important; }
+
+  /* Large tiles: full width */
+  .bento-grid > .bento-card.span-6,
+  .bento-grid > .bento-card.span-7,
+  .bento-grid > .bento-card.span-8,
+  .bento-grid > .bento-card.span-12 { grid-column: span 3 !important; }
+
+  .passport-photo { max-height: 240px !important; object-fit: cover !important; }
+}
+
+/* 3) Safety: if any card has fixed/min heights, neutralize them on mobile */
+@media (max-width: 899.98px) {
+  .bento-card { min-height: 0 !important; height: auto !important; }
+}
