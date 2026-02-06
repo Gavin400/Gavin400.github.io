@@ -11353,4 +11353,72 @@ body.bento-dark .container-fluid.p-0{ padding: 0 !important; }
 .bento-cta { pointer-events: auto; }
 
 
+/* =========================================================
+   Mobile Bento Fix: keep mosaic layout on phones
+   (add this at the END of styles.css)
+   ========================================================= */
+@media (max-width: 767.98px) {
+  /* 2-column bento on mobile */
+  .bento-shell {
+    padding: 1.25rem 1rem 2.25rem;
+  }
+
+  .bento-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    grid-auto-flow: dense; /* helps pack tiles nicely */
+  }
+
+  /* Mobile span mapping using your existing span-* classes:
+     - small cards (span-3 / span-4) become half-width
+     - everything else becomes full-width
+  */
+  .span-3,
+  .span-4 {
+    grid-column: span 1 !important;
+  }
+
+  .span-5,
+  .span-6,
+  .span-7,
+  .span-8,
+  .span-12 {
+    grid-column: span 2 !important;
+  }
+
+  /* Make cards feel better on small screens */
+  .bento-card {
+    padding: 1rem;
+    border-radius: 18px;
+  }
+
+  /* Nav: turn into horizontal scroll so it doesn't wrap/cut off */
+  .bento-nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+  }
+  .bento-nav::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+}
+
+/* Very small phones: fall back to single column for readability */
+@media (max-width: 420px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .span-3,
+  .span-4,
+  .span-5,
+  .span-6,
+  .span-7,
+  .span-8,
+  .span-12 {
+    grid-column: span 1 !important;
+  }
+}
 
